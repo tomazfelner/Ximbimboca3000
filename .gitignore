@@ -1,0 +1,41 @@
+# =====================================================================
+#  Ximbimboca3000 - o repositorio das VERSOES, e so delas.
+#
+#  Este repositorio e PUBLICO e existe para uma coisa so: guardar as
+#  releases de onde cada PC baixa a versao nova. O instalador NAO mora
+#  aqui como arquivo commitado - ele vai anexado na release, que e outra
+#  coisa. (E tambem nao caberia: o .exe tem 120 MB e o limite do GitHub
+#  para arquivo commitado e 100 MB.)
+#
+#  POR ISSO A REGRA AQUI E AO CONTRARIO DO NORMAL. Em vez de listar o
+#  que fica de fora, ignoramos TUDO e nomeamos, um a um, o pouco que
+#  pode entrar. Num repositorio publico essa inversao e o que separa
+#  "esqueci de ignorar um arquivo" de "a agenda inteira vazou" - e a
+#  segunda nao tem desfazer: o que vai para um repositorio publico fica
+#  em cache e em espelho de gente que voce nao conhece.
+#
+#  E ha o que vazar, caso um dia alguem copie a pasta do Ximbimboca para
+#  ca por engano: a pagina da agenda (SIGVIR-*.html) carrega dentro dela
+#  IP de rede interna, nome de maquina, e-mail de gente e o texto das
+#  suas notas; o correio-token.json e a chave da sua caixa de entrada; o
+#  correio-cache.json sao os e-mails baixados; o deploy.json e o token do
+#  GitHub. Com a regra abaixo, nada disso entra nem por arrasto de pasta,
+#  nem por "git add -A" distraido.
+#
+#  PARA DEIXAR UM ARQUIVO NOVO ENTRAR: acrescente uma linha "!nome" na
+#  lista do fim. Se ele estiver dentro de uma pasta, libere a pasta
+#  ANTES ("!pasta/" e so depois "!pasta/arquivo") - sem isso o git nem
+#  desce na pasta, e o arquivo continua de fora sem dizer por que. E a
+#  pegadinha classica deste tipo de .gitignore, e e por isso que ela
+#  esta escrita aqui em vez de na cabeca de quem escreveu.
+# =====================================================================
+
+# Nada entra por padrao.
+*
+
+# O pouco que entra, nomeado um a um:
+!.gitignore
+!.gitattributes
+!README.md
+!CHANGELOG.md
+!LICENSE
